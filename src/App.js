@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Layout, Header, Navigation, Content } from "react-mdl";
+import Main from "./components/main";
+import { Link } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "./App.css";
+
+
+
+const App = () => {
+
+
+    return (
+
+        <div>
+            <Layout className="layout">
+                <Header style={{background:"green"}}
+                    title={
+                        <Link style={{textDecoration: "none", color: "white", marginLeft: "-55px"}} to="/">
+                            Victoriya Alekseeva
+                        </Link>
+                    }
+                    scroll
+                >
+                    <Navigation className="topMenu">
+                        <Link className="link" to="/resume">Resume</Link>
+                        <Link className="link" to="/aboutme">About Me</Link>
+                        <Link className="link" to="/projects">Projects</Link>
+                    </Navigation>
+                </Header>
+
+                <Content>
+                    <div/>
+                    <Main/>
+
+                </Content>
+            </Layout>
+        </div>
+
+    );
+};
 
 export default App;
