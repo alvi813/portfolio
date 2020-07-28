@@ -64,7 +64,7 @@ class Resume extends Component {
 
             <EmploymentHistory
                 startMonth = "June"
-                startYear={2010}
+                startYear={2019}
                 endMonth="Present"
 
                 workName="Mera NN"
